@@ -147,7 +147,7 @@ a:active {
 
 /* Social Links */
 
-.social-link {
+.social-link > svg {
     display: block;
     fill: var(--text-color);
 }
