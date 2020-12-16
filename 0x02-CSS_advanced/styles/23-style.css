@@ -147,12 +147,13 @@ a:active {
 
 /* Social Links */
 
-.social-link > svg {
+.social-link {
     display: block;
-    fill: var(--text-color);
 }
 
-
+.social-link > svg {
+    fill: var(--text-color);
+}
 
 
 /* Class Elements */
