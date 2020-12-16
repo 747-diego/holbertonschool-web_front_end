@@ -155,7 +155,6 @@ a:active {
     fill: var(--text-color);
 }
 
-
 /* Class Elements */
 
 .visually-hidden {
@@ -234,7 +233,7 @@ a:active {
 }
 
 .footer-address {
-    text-decoration-color: var(--text-color);
+    color: var(--text-color);
 }
 
 .footer ul {
