@@ -23,10 +23,6 @@
     --line-height-big: 1.8;
     --section-header-align: center;
     --section-tagline-transform: upppercase;
-
-
-
-
 }
 
 html {
@@ -74,5 +70,3 @@ a {
 .card-category {
     color: var(--color-primary);
 }
-
-
