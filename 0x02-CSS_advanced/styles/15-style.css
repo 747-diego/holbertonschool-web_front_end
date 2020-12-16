@@ -30,11 +30,8 @@
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
 }
-html {
-    box-sizing: border-box:
-}
-  *, *:before, *:after {
-    box-sizing: inherit;
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
 
