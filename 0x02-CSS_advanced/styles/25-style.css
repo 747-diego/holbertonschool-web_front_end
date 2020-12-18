@@ -97,6 +97,14 @@ body {
 	color: var(--nav-item-link-hover);
 }
 
+.button {
+    display: var(--button-display);
+    padding: var(--button-padding);
+    font-size: var(--button-border);
+    color: var(--button-font-size);
+    text-decoration: var(--button-text-decoration);
+}
+
 ul.row {
     margin: 0;
     padding: 0;
