@@ -1,0 +1,11 @@
+/* Write a Sass file that assigns: HOVER */
+
+button {
+
+    color: #FF0000;
+
+    &:hover {
+        
+        color: #00FF00;
+    }
+}

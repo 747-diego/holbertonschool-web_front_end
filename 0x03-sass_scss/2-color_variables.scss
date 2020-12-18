@@ -1,0 +1,19 @@
+/* Write a Sass file that assigns: text color, background color, HTML  */
+$txt-color: #3D3D3D;
+$back-color1: #6D6D6D;
+
+body {
+
+    color: $txt-color;
+    background-color: $back-color1;
+}
+
+p {
+
+    color: $txt-color;
+}
+
+h2 {
+    
+    background-color: $back-color1;
+}

@@ -1,0 +1,18 @@
+/* Write a Sass file that assigns: FONT SIZE + TEXT COLOR to all CLASSES */
+
+.info {
+
+    font-size: 12px;
+}
+
+.success {
+
+    color: #00FF00;
+    @extend .info;
+}
+
+.warning {
+
+    color: #FF0000;
+    @extend .info;
+}
