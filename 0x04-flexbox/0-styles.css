@@ -181,10 +181,12 @@ ul.row {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
 }
 
 /* ADDED DISPLAY FLEX  */
+.row {
+    display: flex;
+}
 
 /* Above this comment I added a new selector for the class "row" */
 /* I added the display property with a value of "flex" to ensure */
