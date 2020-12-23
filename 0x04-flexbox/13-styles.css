@@ -591,27 +591,26 @@
 
     /* Post Meta
     ============================= */
-    
     .post-meta-list {
-        flex-direction: column;
+    flex-direction: column;
     }
 
     .post-meta-list strong {
-        color: var(--color-primary);
-        font-size: var(--font-size-small);
-        text-transform: uppercase;
-        display: block;
+    color: var(--color-primary);
+    font-size: var(--font-size-small);
+    text-transform: uppercase;
+    display: block;
     }
 
     .post-meta-list [class*='post-meta-'] {
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 0.2rem solid var(--color-light-grey);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.2rem solid var(--color-light-grey);
     }
 
     .post-meta-list [class*='post-meta']:last-child {
-        border: none;
-        margin-bottom: 3rem;
+    border: none;
+    margin-bottom: 3rem;
     }
 
     /* Tag list
