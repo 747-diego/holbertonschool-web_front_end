@@ -717,7 +717,7 @@
     }
 
     /* Form group
-============================= */
+    ============================= */
 
     .form-group {
         padding: 1rem;
@@ -725,13 +725,13 @@
         background-color: var(--color-white);
     }
 
-    .form-group:focus-within {
+    .form-group:focus-within     {
         background-color: var(--color-white);
         transition: .3s;
     }
 
     /* Form field
-============================= */
+    ============================= */
 
     .form-field-container {
         position: relative;
@@ -742,7 +742,7 @@
     }
 
     /* Form help
-============================= */
+    ============================= */
 
     .form-group .form-help {
         margin: 0;
