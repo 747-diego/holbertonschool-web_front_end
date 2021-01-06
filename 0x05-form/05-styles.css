@@ -725,7 +725,7 @@
         background-color: var(--color-white);
     }
 
-    .form-group[type=focus-within] {
+    .form-group:focus-within {
         background-color: var(--color-white);
         transition: .3s;
     }
@@ -737,7 +737,7 @@
         position: relative;
     }
 
-    .form-field.icon {
+    .form-field-icon {
         font-style: normal;
     }
 
@@ -755,7 +755,7 @@
         overflow: hidden;
     }
 
-    .form-group[type=focus-within] .form-help {
+    .form-group:focus-within .form-help {
         max-height: 20rem;
         margin: .4rem 0 0;
     }
