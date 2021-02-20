@@ -6,7 +6,7 @@ function createClassRoom(numbersOfStudents) {
     }
 
     var students = [];
-    for (let index = 0; 0 < numbersOfStudents; index++) {
+    for (let index = 0; index < numbersOfStudents; index++) {
         students.push(studentSeat(index + 1));
     }
     return(students)
