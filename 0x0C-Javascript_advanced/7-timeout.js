@@ -1,5 +1,5 @@
 console.log("Start of the execution queue");
-console.log(setTimeout("Final code block to be executed"));
+setTimeout(function(){ console.log("Final code block to be executed"); }, 0);
 
 for(let index = 0; index < 100; index++) {
     console.log(index);
