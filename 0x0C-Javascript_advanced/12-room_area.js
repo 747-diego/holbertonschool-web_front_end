@@ -3,7 +3,7 @@ var roomDimensions = {
     length: 100,
 
     getArea() {
-        return($this.width * $this.length);
+        return(this.width * this.length);
     }
 }
 
