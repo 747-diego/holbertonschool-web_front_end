@@ -7,48 +7,33 @@
         <title>Task 0</title>
         <!-- Latest Version JQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-        
+
         <script type="application/javascript">
+            function replaceFamilyTree() {
+                $('tbody').html('<tr><td>Gerard</td><td>Bonissa</td></tr>');
+        };
 
-            function createFamilyTree() {
-                $('body').append('<table><thead><tr><th>Firstname</th><th>Lastname</th></tr></thead></table>')
-                .find('table')
-                .first()
-                .append('<tbody></tbody>');
-		}
+        function createFamilyTree() {
+                $('body').append('<table><tr>',
+                '<th>Firstname</th>',
+                '<th>lastname</th>',
 
+                '</tr>', '<tr>',
+                '<td>Guillaume</td>',
+                '<td>Salva</td>',
 
-        function addNewMember(firstName, lastName) {
-			$('table').find('tbody')
-            .first()
-            .append('<tr><td>${firstName}</td><td>${lastName}</td><td>(X)</td></tr>');
+                '</tr>','<tr>',
+                '<td>Paulette</td>', '<td>Salva</td>',
 
-			$('tbody').find('tr').last()
-			.find('td').click(function() {
-				check.remove();
-			});
+                '</tr> <tr>',
+                '<td>Antoine</td>','<td>Salva</td>',
+                '</tr>')
 
-            $('tbody').find('tr').last()
-			.find('td').last()
-            .css('background-color', 'orange');
-
-		}
+        };
 
 
         createFamilyTree();
-
-        addNewMember('Guillaume', 'Salva');
-		addNewMember('Arielle', 'Snizt');
-		addNewMember('Fanette', 'Snizt');
-		addNewMember('Gerard', 'Snizt');
-		addNewMember('Victor', 'Salva');
-
-
-        // the first row Guillaume, Salva
-        // the second row Arielle, Snizt
-        // the third row Fanette, Snizt
-        // the fourth row Gerard, Snizt
-        // the fifth row Victor, Salva
+        replaceFamilyTree();
         </script>
 
     </head>
@@ -60,5 +45,3 @@
     </body>
 
 </html>
-
-
