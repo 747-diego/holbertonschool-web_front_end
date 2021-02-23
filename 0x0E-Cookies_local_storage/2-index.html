@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 1</title>
+        <!-- Latest Version JQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+        <script type="application/javascript">
+                // var para = document.createElement("P");
+                // para.innerText = "Welcome Holberton!";
+                // document.body.appendChild(para);
+
+                // Cookie Dough 
+                function setCookies() {
+                    var cookie = document.cookie;
+                    var TenDayExperation = "max-age=864000"
+                    var firsName = document.getElementById("firstname").value;
+                    var email = document.getElementById("email").value;
+
+                    cookie = "firstname=" + firstName + ";" + TenDayExperation;
+                    cookie = "email=" + email + ";" + TenDayExperation;
+                }
+
+                // Cookie Cutter 
+                function showCookies() {
+                    var CookieCutter = document.cookie;
+                    var para = document.createElement("P");
+                    para.appendChild(document.createTextNode("Cookies: " + CookieCutter));
+                    document.body(appendChild(para));
+                }
+
+                // Grab the Cookie
+                function getCookie(name) {
+                    var cookieName = name + "=";
+                    var cookie = document.cookie;
+                    var theComponent = decodeURIComponent(cookie).split(';');
+                    var Cookies = 0;
+                    while (Cookies < theComponent.length) {
+                        while (theComponent[idx].charAt(0) === " ") {
+                            theComponent[idx].substring(1);
+                        }
+                        if (theComponent[idx].indexOf(name) === 0) {
+                            NameLength = firstName.length;
+                            ComponentLength = theComponent[idx].length;
+
+                            return(theComponent[idx].substring(firstName))
+                        }
+                    }
+                    return "";
+                }
+        </script>
+
+    </head>
+
+    <body>
+        <input id="firstname" type="text">
+        <input id="email" type="text">
+
+        <button onclick="setCookies()">
+            Log me in
+        </button>
+
+    </body>
+
+</html>
