@@ -27,6 +27,19 @@
 			$('ul').append('<li><p><span>${id} - </span><b>${title}</b></p><p>${snippet}</p></li>');
 		}
 
+        function displayLoading(loading) {
+            // If loading is true, it wraps the element with a div tag and the class loading
+            // If loading is false, it unwrap the ul from the div
+			if (loading === true) {
+				$('ul:first')
+                .wrap('<div class="loading"></div>');
+			} else {
+				$('ul:first')
+                .unwrap();
+			}
+		}
+
+
 		function queryWikipedia(search, offset = 0) {
 			var api = 'https://en.wikipedia.org/w/api.php';
 		}
