@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+        <!-- Latest Version JQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        
+        <script type="application/javascript">
+
+            function createFamilyTree() {
+                $('body').append('<table><thead><tr><th>Firstname</th><th>Lastname</th></tr></thead></table>')
+                .find('table')
+                .first()
+                .append('<tbody></tbody>');
+		}
+
+
+        function addNewMember(firstName, lastName, position) {
+            // When position is equal to before, it should add the row at the top of the table
+            var pos = position === 'before';
+            if (pos) {
+                $('body').find('tbody')
+                .first()
+                .prepend('<tr><td>${firstName}</td><td>${lastName}</td><td>(X)</td></tr>');
+            } else {
+                $('body').find('tbody')
+                .first()
+                .append('<tr><td>${firstName}</td><td>${lastName}</td><td>(X)</td></tr>');
+            }
+
+
+			$('table').find('tbody')
+            .first()
+            .append('<tr><td>${firstName}</td><td>${lastName}</td><td>(X)</td></tr>');
+
+			$('tbody').find('tr').last()
+			.find('td').click(function() {
+				check.remove();
+			});
+
+            $('tbody').find('tr').last()
+			.find('td').last()
+            .css('background-color', 'orange');
+
+		}
+
+        function createForm() {
+            var test;
+        }
+
+
+        createFamilyTree();
+        createForm();
+        </script>
+
+    </head>
+
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
+
+
