@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Task 5. Local storage </title>
+
+    "
+        <script type="application/javascript">
+            var availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+
+            function SessionStorageCheck(){ 
+                try {
+                    createStore();
+                    displayCart();
+                    return true;
+                } catch(e) {
+                return false;
+                }
+            }
+
+            if (SessionStorageCheck() === true){
+                // available
+                createStore();
+                displayCart();
+            }else{
+                // unavailable
+                alert("Sorry, your browser does not support Web storage. Try again with a better one");
+            }
+
+            function getCartFromStorage() {
+                var CartItem = sessionStorage.getItem("cart");
+                var emptyObject = {};
+                if ( !CartItem ) {
+                    return(emptyObject);
+                } else {
+                    return(JSON.parse(CartItem));
+                }
+            } 
+
+            function addItemToCart(item) {
+                // adds a key to the local storage of the name of the item,
+                // and set the value to true
+                localStorage.setItem(item, "true");
+            }
+
+            function removeItemfromCart(item) {
+                delete(getCartFromStorage(item));
+                sessionStorage.getCartFromStorage(item) = JSON.stringify.getCartFromStorage(item);
+                displayCart();
+            }
+
+            function clearCart() {
+                sessionStorage.clear();
+                displayCart();
+            }
+
+            function createStore() {
+                document.createElement('h2').appendChild(document.createTextNode('Available products:'));
+                document.body.appendChild(document.createElement('h2'));
+
+                availableItems.forEach(function(item) {
+                    
+                    document.createElement("li").textContent = item;
+                    document.createElement("li").addEventListener('click', function() {
+                        addItemToCart(this.textContent);
+                    });
+                    document.createElement("ul").appendChild(document.createElement("li"));
+                });
+            }
+
+            function updateCart() {
+                document.getElementsByTagName('div').appendChild(document.createElement('ul'));
+                if (Object.keys(cart).length === 0) {
+                    document.createElement('li').appendChild(createTextNode('Your cart is empty'));
+                    document.appendChild(document.createElement('li'));
+                } else{
+                    continue
+                }
+            }
+
+            function displayCart() {
+                // if the local storage does not contain any item, this function does not do anything
+                // If the local storage contains any item, it should display the message
+                var SessionStorageCheck = sessionStorage.length;
+                if ( SessionStorageCheck > 0) {
+                    DisplayMessage = document.createTextNode("You previously had ${window.localStorage.length} items in your cart");
+                    document.createElement("p").appendChild(DisplayMessage);
+                    document.body.appendChild(document.createElement("p"));
+                }
+                else {
+                    continue
+                }
+            }
+
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
