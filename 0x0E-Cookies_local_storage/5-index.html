@@ -70,7 +70,7 @@
                 if ( LocalStorageCheck > 0) {
                     DisplayMessage = document.createTextNode("You previously had ${window.localStorage.length} items in your cart");
                     document.createElement("p").appendChild(DisplayMessage);
-                    document.body.appendChild(p);
+                    document.body.appendChild(document.createElement("p"));
                 }
                 else {
                     continue
