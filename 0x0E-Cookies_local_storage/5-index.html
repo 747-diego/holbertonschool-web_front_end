@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Task 5. Local storage </title>
+
+    "
+        <script type="application/javascript">
+
+            var availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+
+            try {
+                createStore();
+                displayCart();
+            } catch (e) {
+                if (!e) {
+                    alert('Sorry, your browser does not support Web storage. Try again with a better one');
+                }
+            }
+
+            function LocalStorageCheck(){ 
+                try {
+                    createStore();
+                    displayCart();
+                    return true;
+                } catch(e) {
+                return false;
+                }
+            }
+
+            if(LocalStorageCheck() === true){
+                // available
+                createStore();
+                displayCart();
+            }else{
+                // unavailable
+                alert("Sorry, your browser does not support Web storage. Try again with a better one");
+            }
+
+
+
+
+
+
+            function addItemToCart(item) {
+                // adds a key to the local storage of the name of the item,
+                // and set the value to true
+                localStorage.setItem(item, "true");
+            }
+
+            function createStore() {
+                // Create a ul and append it to the DOM
+                document.querySelector("body").appendChild(document.createElement("ul"));
+                availableItems.forEach(function(ProductName) {
+                    // Loop through the array of items, and create a list item to add to the ul
+                    // The item should display the name of the available product
+                    document.createElement("li").textContent = ProductName;
+                    document.createElement("li").addEventListener("click", function() {
+                        addItemToCart(this.textContent);
+                    });
+                    document.createElement("ul").appendChild(document.createElement("li"));
+                });
+            }
+
+            function displayCart() {
+                // if the local storage does not contain any item, this function does not do anything
+                // If the local storage contains any item, it should display the message
+                var LocalStorageCheck = window.localStorage.length;
+                if ( LocalStorageCheck > 0) {
+                    DisplayMessage = document.createTextNode("You previously had ${window.localStorage.length} items in your cart");
+                    document.createElement("p").appendChild(DisplayMessage);
+                    document.body.appendChild(p);
+                }
+                else {
+                    continue
+                }
+            }
+
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
